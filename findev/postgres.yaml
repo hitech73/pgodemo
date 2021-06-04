@@ -13,7 +13,7 @@ spec:
       resources:
         limits:
           cpu: 0.5
-          memory: 256MB
+          memory: 256Mi
       volumeClaimSpec:
         accessModes:
         - "ReadWriteOnce"
