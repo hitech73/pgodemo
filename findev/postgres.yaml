@@ -9,11 +9,11 @@ spec:
   postgresVersion: 13
   instances:
     - name: 'pgc'
-      replicas: 3
+      replicas: 2
       resources:
         limits:
-          cpu: 1.0
-          memory: 2Gi
+          cpu: 0.5
+          memory: 256MB
       volumeClaimSpec:
         accessModes:
         - "ReadWriteOnce"
@@ -28,7 +28,7 @@ spec:
         parameters:
           max_parallel_workers: 2
           max_worker_processes: 2
-          shared_buffers: 256MB
+          shared_buffers: 64MB
           work_mem: 2MB
 
   archive:
